@@ -2,39 +2,45 @@ import { useState } from 'react';
 import './App.css';
 
 const CardImages = [
-  { "src": "/img/image1.jpeg" },
-  { "src": "/img/image2.jpeg" },
-  { "src": "/img/image3.jpeg" },
-  { "src": "/img/image1.jpeg" },
-  { "src": "/img/image1.jpeg" },
-  { "src": "/img/image1.jpeg" },
+  { src: "/img/image1.jpeg" },
+  { src: "/img/image2.jpeg" },
+  { src: "/img/image3.jpeg" },
 ];
 
 function App() {
+  const [cards, setCards] = useState([]);
+  const [turns, setTurns] = useState(0);
+
   const shuffleCards = () => {
     const shuffledCards = [];
-    let copyArray = [...CardImages]; // Make a copy of the array
-    console.log("this is copyArray " + copyArray.length);
-    while (copyArray.length > 0) { // Use a while loop to shuffle the entire array
-      const randomArrayIndex = Math.floor(Math.random() * copyArray.length); // Generate a random index
-      const randomCard = copyArray.splice(randomArrayIndex, 1)[0]; // Remove and get the item at the random index
-      shuffledCards.push(randomCard); // Push the random card into shuffledCards
+    let copyArray = [...CardImages, ...CardImages];
+    while (copyArray.length > 0) {
+      const randomArrayIndex = Math.floor(Math.random() * copyArray.length);
+      const randomCard = copyArray.splice(randomArrayIndex, 1)[0];
+
+      shuffledCards.push({ ...randomCard, id: Math.random() }); // Assign unique ID
+
     }
-
-    console.log(shuffledCards); // Output the shuffled cards (for testing)
-
-    // Perform further actions with shuffledCards if needed
-
-    return shuffledCards;
+    console.log(shuffledCards, turns);
+    setCards(shuffledCards);
+    setTurns(0);
   };
 
   return (
-    <>
-      <div className="App">
-        <h1>Magic Match</h1>
-        <button onClick={shuffleCards}>New Game</button>
+    <div className="App">
+      <h1>Magic Match</h1>
+      <button onClick={shuffleCards}>New Game</button>
+      <div className="card-grid">
+        {cards.map((card) => (
+          <div className="card" key={card.id}>
+            <div>
+              <img className="front" src={card.src} alt="card-front" height= "400px" width = "200px" />
+              <img className="back" src="src/assets/cover.png" alt="card back" />
+            </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
