@@ -5,6 +5,11 @@ const CardImages = [
   { src: "/img/image1.jpeg" },
   { src: "/img/image2.jpeg" },
   { src: "/img/image3.jpeg" },
+  { src: "/img/image4.jpeg" },
+  { src: "/img/image5.jpeg" },
+  { src: "/img/image6.jpeg" },
+  { src: "/img/image7.jpeg" },
+  { src: "/img/image8.jpeg" },
 ];
 
 function App() {
@@ -13,7 +18,7 @@ function App() {
 
   const shuffleCards = () => {
     const shuffledCards = [];
-    let copyArray = [...CardImages, ...CardImages];
+    let copyArray = [...CardImages];
     while (copyArray.length > 0) {
       const randomArrayIndex = Math.floor(Math.random() * copyArray.length);
       const randomCard = copyArray.splice(randomArrayIndex, 1)[0];
@@ -28,13 +33,14 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Magic Match</h1>
+      <h1>Open Source Matching</h1>
+      <p>Match the legendary founders with their creations and Remember it !!! </p>
       <button onClick={shuffleCards}>New Game</button>
       <div className="card-grid">
         {cards.map((card) => (
           <div className="card" key={card.id}>
             <div>
-              <img className="front" src={card.src} alt="card-front" height= "400px" width = "200px" />
+              <img className="front" src={card.src} alt="card-front" height= "200px" width = "200px" />
               <img className="back" src="src/assets/cover.png" alt="card back" />
             </div>
           </div>
