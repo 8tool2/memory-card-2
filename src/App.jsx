@@ -3,14 +3,14 @@
   import SingleCards from './Components/SingleCards'; 
 
   const CardImages = [
-    { src: "/img/image1.jpeg", name:"richard-feynman",matched:false },
-    { src: "/img/image2.jpeg", name:"linus-toldavis" ,matched:false},
-    { src: "/img/image3.jpeg", name: "mozilla",matched:false },
-    { src: "/img/image4.jpeg", name:"richard-feynman",matched:false },
-    { src: "/img/image5.jpeg", name:"linus-toldavis",matched:false  },
-    { src: "/img/image6.jpeg", name: "mozilla",matched:false},
-    { src: "/img/image7.jpeg", name:"blender" ,matched:false},
-    { src: "/img/image8.jpeg", name:"blender",matched:false },
+    { src: "https://upload.wikimedia.org/wikipedia/commons/2/28/Richard_Stallman_at_LibrePlanet_2019.jpg", name:"richard-feynman",matched:false },
+    { src: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR2a8LLjkXzYOMMMUVGQES3mrBHRxb5cyHW7DNzxnt7aVRkHItR", name:"linus-toldavis" ,matched:false},
+    { src: "https://cdn.vox-cdn.com/thumbor/bKFaEEWhT9n08enNW4KnB8DMIpw=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/15800415/brendan-eich-mozilla-firefox-square.0.1467740722.jpg", name: "mozilla",matched:false },
+    { src: "https://eu-images.contentstack.com/v3/assets/blt10e444bce2d36aa8/blte8cff20f03963ec1/652655102f875275076dab08/untitled_2_0.png?width=850&auto=webp&quality=95&format=jpg&disable=upscale", name:"richard-feynman",matched:false },
+    { src: "https://static-00.iconduck.com/assets.00/linux-icon-1024x1024-opqr19tb.png", name:"linus-toldavis",matched:false  },
+    { src: "https://www.cnet.com/a/img/hub/2014/06/13/c582d2aa-092e-4d29-a616-a1e5c9403b36/firefox-logo-2014-vertical-4sts.jpg", name: "mozilla",matched:false},
+    { src: "https://miro.medium.com/v2/resize:fit:947/1*tXi4QoDAuHVqjGpHvhPG0w.png", name:"blender" ,matched:false},
+    { src: "https://upload.wikimedia.org/wikipedia/commons/8/8d/Ton_Roosendaal_2018_%28ZkKPXn6QBx8%29.jpg", name:"blender",matched:false },
   ];
 
   function App() {
