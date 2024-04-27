@@ -4,6 +4,7 @@
 
 img{
     width:150px;
+    height:300px;
     display:block; 
     border: 2px solid black ; 
     border-radius: 6px; 
@@ -13,12 +14,22 @@ img{
 
 .card .front{
     transform: rotateY(90deg);
-    position : absolute; 
-    display: none;
+    transform: all ease-in 0.25s;
+    position: absolute ; 
 }
 
-.flipped .front{
+.flipped .front{ 
     transform: rotateY(0deg);
-    display:block;
+    transition-delay: 0.2s;
+}
+
+.card .back{
+    transition: all ease-in 0.2s;
+    transition-delay: 0.2s;
+}
+
+.flipped .back{
+    transform: rotateY(90deg);
+    transition-delay:0s ;
 }
 
