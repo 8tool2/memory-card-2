@@ -3,8 +3,8 @@
 }
 
 img{
-    width:150px;
-    height:300px;
+    max-width:150px;
+    min-height:300px;
     display:block; 
     border: 2px solid black ; 
     border-radius: 6px; 
